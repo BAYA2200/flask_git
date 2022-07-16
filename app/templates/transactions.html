@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Номер</th>
+      <th scope="col">Имя</th>
+      <th scope="col">Фамилия</th>
+      <th scope="col">Должность</th>
+      <th scope="col">Отдел</th>
+      <th scope="col">Детально</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for transaction in transactions %}
+    <tr>
+      <th scope="row">{{ transactions.id }}</th>
+      <td>{{ transactions.name }}</td>
+      <td>{{ transactions.period }}</td>
+      <td>{{ transactions.value }}</td>
+      <td>{{ transactions.status }}</td>
+      <td>{{ transactions.init }}</td>
+      <td>{{ transactions.subject }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock content %}
